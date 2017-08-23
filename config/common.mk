@@ -35,6 +35,7 @@ endif
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
+
 #permissions
 PRODUCT_COPY_FILES += \
     vendor/hash/prebuilt/etc/permissions/privapp-permissions-hash.xml:system/etc/permissions/privapp-permissions-hash.xml \
