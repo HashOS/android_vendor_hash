@@ -79,6 +79,10 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 
+# whitelist packages for location providers not in system
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.services.whitelist.packagelist=com.google.android.gms
+
 # Add our overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/hash/overlay/common
 
