@@ -32,6 +32,14 @@ PRODUCT_COPY_FILES += \
     vendor/hash/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
+# Enforce privapp-permissions whitelist
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
+#permissions
+PRODUCT_COPY_FILES += \
+    vendor/hash/prebuilt/etc/permissions/privapp-permissions-hash.xml:system/etc/permissions/privapp-permissions-hash.xml \
+    vendor/hash/prebuilt/etc/permissions/privapp-permissions-elgoog.xml:system/etc/permissions/privapp-permissions-elgoog.xml
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/hash/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
