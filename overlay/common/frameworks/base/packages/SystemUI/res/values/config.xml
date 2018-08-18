@@ -27,4 +27,8 @@
 
     <bool name="quick_settings_show_full_alarm">true</bool>
 
+    <!-- let people decide if they want keyguard shortcuts or not -->
+    <bool name="config_keyguardShowLeftAffordance">true</bool>
+    <bool name="config_keyguardShowCameraAffordance">true</bool>
+
 </resources>
