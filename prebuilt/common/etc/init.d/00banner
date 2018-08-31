@@ -1,0 +1,12 @@
+#!/system/bin/sh
+#
+# Print startup info
+#
+L="log -p i -t hash"
+
+$L "  _   _           _      ___  ____"
+$L " | | | | __ _ ___| |__  / _ \/ ___|"
+$L " | |_| |/ _` / __| '_ \| | | \___ \"
+$L " |  _  | (_| \__ \ | | | |_| |___) |"
+$L " |_| |_|\__,_|___/_| |_|\___/|____/"
+$L "Welcome to Android `getprop ro.build.version.release` / HashOS-`getprop ro.hash.version`";
