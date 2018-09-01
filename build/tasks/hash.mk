@@ -8,11 +8,14 @@ banana: otapackage
 	@echo -e ""
 	@echo -e "${cya}Building ${bldcya}HashOS ${txtrst}";
 	@echo -e ""
-	@echo -e ${CL_GRN}"            ▄▄▄·       .▄▄ · ▪   ▄▄▄·          "
-	@echo -e ${CL_GRN}"           ▐█ ▀█ ▪     ▐█ ▀. ██ ▐█ ▄█          "
-	@echo -e ${CL_GRN}"           ▄█▀▀█  ▄█▀▄ ▄▀▀▀█▄▐█· ██▀·          "
-	@echo -e ${CL_GRN}"           ▐█ ▪▐▌▐█▌.▐▌▐█▄▪▐█▐█▌▐█▪·•          "
-	@echo -e ${CL_GRN}"            ▀  ▀  ▀█▄▀▪ ▀▀▀▀ ▀▀▀.▀             "
+        @echo -e ${CL_GRN}"              ▄█    █▄       ▄████████    ▄████████    ▄█    █▄     ▄██████▄     ▄████████          "
+        @echo -e ${CL_GRN}"             ███    ███     ███    ███   ███    ███   ███    ███   ███    ███   ███    ███          "
+        @echo -e ${CL_GRN}"             ███    ███     ███    ███   ███    █▀    ███    ███   ███    ███   ███    █▀           "
+        @echo -e ${CL_GRN}"            ▄███▄▄▄▄███▄▄   ███    ███   ███         ▄███▄▄▄▄███▄▄ ███    ███   ███                 "
+        @echo -e ${CL_GRN}"           ▀▀███▀▀▀▀███▀  ▀███████████ ▀███████████ ▀▀███▀▀▀▀███▀  ███    ███ ▀███████████          "
+        @echo -e ${CL_GRN}"             ███    ███     ███    ███          ███   ███    ███   ███    ███          ███          "
+        @echo -e ${CL_GRN}"             ███    ███     ███    ███    ▄█    ███   ███    ███   ███    ███    ▄█    ███          "
+        @echo -e ${CL_GRN}"             ███    █▀      ███    █▀   ▄████████▀    ███    █▀     ▀██████▀   ▄████████▀           "
 	@echo -e ""
 	@echo -e ${CL_MAG}"zip: "${CL_CYN} $(HASH_TARGET_PACKAGE)${CL_RST}
 	@echo -e ${CL_MAG}"md5: "${CL_CYN}" `cat $(HASH_TARGET_PACKAGE).md5sum | cut -d ' ' -f 1`"${CL_RST}
