@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 #
 # Copyright (C) 2013-15 The CyanogenMod Project
 #           (C) 2017    The LineageOS Project
@@ -84,16 +84,13 @@ def fetch_query_via_ssh(remote_url, query):
                 'current_revision': data['currentPatchSet']['revision'],
                 'number': int(data['number']),
                 'revisions': {patch_set['revision']: {
-                    '_number': int(patch_set['number']),
+                    'number': int(patch_set['number']),
                     'fetch': {
                         'ssh': {
                             'ref': patch_set['ref'],
                             'url': 'ssh://{0}:{1}/{2}'.format(userhost, port, data['project'])
                         }
-                    },
-                    'commit': {
-                        'parents': [{ 'commit': parent } for parent in patch_set['parents']]
-                    },
+                    }
                 } for patch_set in data['patchSets']},
                 'subject': data['subject'],
                 'project': data['project'],
@@ -246,6 +243,8 @@ if __name__ == '__main__':
     for project in projects:
         name = project.get('name')
         path = project.get('path')
+        if path is None:
+            path=name
         revision = project.get('revision')
         if revision is None:
             for remote in remotes:
@@ -323,7 +322,7 @@ if __name__ == '__main__':
 
         mergables.append({
             'subject': review['subject'],
-            'project': review['project'],
+            'project': review['project'].split('/')[1],
             'branch': review['branch'],
             'change_id': review['change_id'],
             'change_number': review['number'],
@@ -363,6 +362,8 @@ if __name__ == '__main__':
         elif args.ignore_missing:
             print('WARNING: Skipping {0} since there is no project directory for: {1}\n'.format(item['id'], item['project']))
             continue
+        elif item['project'] == 'platform_manifest':
+            project_path = '.repo/manifests'
         else:
             sys.stderr.write('ERROR: For {0}, could not determine the project path for project {1}\n'.format(item['id'], item['project']))
             sys.exit(1)
@@ -413,9 +414,9 @@ if __name__ == '__main__':
                 print('Trying to fetch the change from GitHub')
 
             if args.pull:
-                cmd = ['git pull --no-edit hashos', item['fetch'][method]['ref']]
+                cmd = ['git pull --no-edit hash', item['fetch'][method]['ref']]
             else:
-                cmd = ['git fetch hashos', item['fetch'][method]['ref']]
+                cmd = ['git fetch hash', item['fetch'][method]['ref']]
             if args.quiet:
                 cmd.append('--quiet')
             else:
