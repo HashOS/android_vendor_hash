@@ -1,0 +1,16 @@
+art
+bionic
+build
+build/soong
+frameworks/av
+frameworks/base
+frameworks/native
+frameworks/opt/telephony
+frameworks/opt/net/wifi
+hardware/interfaces
+hardware/qcom/audio/default
+hardware/qcom/display
+hardware/qcom/media
+packages/apps/Settings
+packages/providers/DownloadProvider
+packages/providers/MediaProvider
