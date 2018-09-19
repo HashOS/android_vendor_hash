@@ -1,6 +1,7 @@
 # Required packages
 PRODUCT_PACKAGES += \
     Gallery2 \
+    HashChange \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
