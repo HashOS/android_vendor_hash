@@ -92,5 +92,8 @@ include vendor/hash/config/bootanimation.mk
 # Packages
 include vendor/hash/config/packages.mk
 
+# Themes
+include vendor/hash/config/themes.mk
+
 # Versioning
 include vendor/hash/config/version.mk
