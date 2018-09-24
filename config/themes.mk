@@ -50,6 +50,8 @@ PRODUCT_PACKAGES += \
     ContactsThemeChocolate \
     DialerThemeChocolate \
     FilesThemeChocolate \
+    WellbeingChocolateTheme \
     ContactsThemeExtended \
     DialerThemeExtended \
-    FilesThemeExtended
+    FilesThemeExtended \
+    WellbeingExtendedTheme
