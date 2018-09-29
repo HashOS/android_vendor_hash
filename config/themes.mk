@@ -41,17 +41,13 @@ PRODUCT_PACKAGES += \
     SystemChocolateTheme \
     SettingsChocolateTheme \
     SystemUIChocolateTheme \
-    ContactsThemeBlack \
     DialerThemeBlack \
     FilesThemeBlack \
-    ContactsThemeDark \
     DialerThemeDark \
     FilesThemeDark \
-    ContactsThemeChocolate \
     DialerThemeChocolate \
     FilesThemeChocolate \
     WellbeingChocolateTheme \
-    ContactsThemeExtended \
     DialerThemeExtended \
     FilesThemeExtended \
     WellbeingExtendedTheme
