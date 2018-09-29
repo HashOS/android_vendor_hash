@@ -29,5 +29,5 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.hash.buildtype=$(HASH_BUILDTYPE) \
   ro.hash.version=$(HASH_VERSION) \
   ro.hash.device=$(HASH_BUILD) \
-  ro.modversion=$(HASH_VERSION)
+  ro.modversion=$(HASH_VERSION) \
   ro.hash.fingerprint=$(HASH_FINGERPRINT)
