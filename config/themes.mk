@@ -40,14 +40,4 @@ PRODUCT_PACKAGES += \
     SystemUIExtendedTheme \
     SystemChocolateTheme \
     SettingsChocolateTheme \
-    SystemUIChocolateTheme \
-    DialerThemeBlack \
-    FilesThemeBlack \
-    DialerThemeDark \
-    FilesThemeDark \
-    DialerThemeChocolate \
-    FilesThemeChocolate \
-    WellbeingChocolateTheme \
-    DialerThemeExtended \
-    FilesThemeExtended \
-    WellbeingExtendedTheme
+    SystemUIChocolateTheme
