@@ -8,7 +8,8 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     messaging \
     OmniJaws \
-    Turbo
+    Turbo \
+    HashRecord
 
 # Filesystems tools
 PRODUCT_PACKAGES += \
@@ -23,3 +24,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
+
+# Telephony extension
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
