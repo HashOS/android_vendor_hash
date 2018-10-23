@@ -18,3 +18,8 @@ include $(TOPDIR)vendor/hash/build/core/mtk_target.mk
 
 # Rules for QCOM targets
 include $(TOPDIR)vendor/hash/build/core/qcom_target.mk
+
+# Ignore neverallows for non-user builds
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
